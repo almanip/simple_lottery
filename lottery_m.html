@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>
+    if (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+      window.location.href = "lottery.html"
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0, user-scalable=0">
+  <title>李紫璇的双色球市场</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: url(name.jpg) center/cover;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    header {
+      display: block;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    h1 {
+      height: 70px;
+      line-height: 70px;
+    }
+
+    header div {
+      height: 30px;
+      line-height: 30px;
+    }
+
+
+    article {
+      margin-top: 10px;
+      overflow: hidden;
+      display: block;
+      height: 580px;
+    }
+
+    .rule {
+      text-align: center;
+      height: 30px;
+      line-height: 30px;
+      font-size: 10px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      background-color: pink;
+    }
+
+    .show {
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      margin: auto;
+      background-color: rgba(255, 192, 203, 0.3);
+      border-radius: 5px;
+    }
+
+    div[class^="num"] {
+      float: left;
+      width: 46px;
+      height: 46px;
+      text-align: center;
+      line-height: 46px;
+      border-radius: 26px;
+      background-color: green;
+      margin: 0 4px;
+      font-size: 10px;
+    }
+
+    .user {
+      display: inline-block;
+      width: 100%;
+      height: 30px;
+      margin: 10px 0;
+      background-color: rgba(190, 121, 181, 0.3);
+    }
+
+    .tip {
+      float: left;
+      height: 30px;
+      line-height: 30px;
+      font-size: 10px;
+    }
+
+    .write {
+      display: inline-block;
+      width: 280px;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 5px;
+    }
+
+    .write input {
+      float: left;
+      outline: none;
+      border-width: 0;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 15px;
+      background-color: #f54646;
+      margin: 0 5px;
+      font-size: 10px;
+    }
+
+    .mynum7 {
+      background-color: #39f;
+    }
+
+    .rd,
+    .open {
+      outline: none;
+      display: block;
+      width: 80px;
+      height: 60px;
+      background-color: pink;
+      font-size: 30px;
+      margin: 10px auto;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>李紫璇的双色球市场</h1>
+      <div>
+        <input type="button" value="再来一注彩票" class="btn">
+      </div>
+    </header>
+    <article>
+      <p class="rule">规则：前6个数字1-33，最后一个数字1-16。</p>
+      <p class="rule">奖励递增：2+1，3+1(4+0)，4+1(5+0)，5+1(6+0)，6+1</p>
+      <ul class="show">
+        <li>
+          <div class="num1"></div>
+        </li>
+        <li>
+          <div class="num2"></div>
+        </li>
+        <li>
+          <div class="num3"></div>
+        </li>
+        <li>
+          <div class="num4"></div>
+        </li>
+        <li>
+          <div class="num5"></div>
+        </li>
+        <li>
+          <div class="num6"></div>
+        </li>
+        <li>
+          <div class="num7"></div>
+        </li>
+      </ul>
+      <div class="user">
+        <p class="tip">请输入你的号码：</p>
+        <ul class="write">
+          <li><input type="text" class="mynum1"></li>
+          <li><input type="text" class="mynum2"></li>
+          <li><input type="text" class="mynum3"></li>
+          <li><input type="text" class="mynum4"></li>
+          <li><input type="text" class="mynum5"></li>
+          <li><input type="text" class="mynum6"></li>
+          <li><input type="text" class="mynum7"></li>
+        </ul>
+      </div>
+      <button class="rd">随机</button>
+      <button class="open">开奖</button>
+    </article>
+  </div>
+
+  <script src="jquery.min.js"></script>
+  <script type="text/javascript">
+    var opennum = 0, openflag = 1
+    $(".rd").click(function () {
+      let num = Math.floor(Math.random() * (33 - 1) + 1)
+      $(".mynum1").val(num)
+      num = Math.floor(Math.random() * (33 - 1) + 1)
+      $(".mynum2").val(num)
+      num = Math.floor(Math.random() * (33 - 1) + 1)
+      $(".mynum3").val(num)
+      num = Math.floor(Math.random() * (33 - 1) + 1)
+      $(".mynum4").val(num)
+      num = Math.floor(Math.random() * (33 - 1) + 1)
+      $(".mynum5").val(num)
+      num = Math.floor(Math.random() * (33 - 1) + 1)
+      $(".mynum6").val(num)
+      num = Math.floor(Math.random() * (16 - 1) + 1)
+      $(".mynum7").val(num)
+    })
+    $(".open").click(function () {
+      if (openflag) {
+        let num = Math.floor(Math.random() * (33 - 1) + 1)
+        if (num < 10) {
+          num = '0' + num
+        }
+        switch (opennum) {
+          case 0: {
+            $(".num1").text(num)
+            $(".num1").css("background-color", "#f54646")
+            opennum += 1
+            break
+          }
+          case 1: {
+            $(".num2").text(num)
+            $(".num2").css("background-color", "#f54646")
+            opennum += 1
+            break
+          }
+          case 2: {
+            $(".num3").text(num)
+            $(".num3").css("background-color", "#f54646")
+            opennum += 1
+            break
+          }
+          case 3: {
+            $(".num4").text(num)
+            $(".num4").css("background-color", "#f54646")
+            opennum += 1
+            break
+          }
+          case 4: {
+            $(".num5").text(num)
+            $(".num5").css("background-color", "#f54646")
+            opennum += 1
+            break
+          }
+          case 5: {
+            $(".num6").text(num)
+            $(".num6").css("background-color", "#f54646")
+            opennum += 1
+            break
+          }
+          case 6: {
+            num = Math.floor(Math.random() * (16 - 1) + 1)
+            if (num < 10) {
+              num = '0' + num
+            }
+            $(".num7").text(num)
+            $(".num7").css("background-color", "#39f")
+            openflag = 0
+            opennum += 1
+            break
+          }
+          default: {
+            openflag = 0
+            break
+          }
+        }
+      }
+    })
+    $(".btn").click(function () {
+      location.reload(true);
+    })
+  </script>
+</body>
+
+</html>

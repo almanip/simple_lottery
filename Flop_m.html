@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>
+    if (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+      window.location.href = "Flop.html"
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0, user-scalable=0">
+  <title>李紫璇的寻找四叶草之旅</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: url(name.jpg) center/cover;
+    }
+
+    header {
+      display: block;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    h1 {
+      height: 70px;
+      line-height: 70px;
+    }
+
+
+    header div {
+      height: 30px;
+      line-height: 30px;
+    }
+
+    article {
+      margin-top: 10px;
+      overflow: hidden;
+      display: block;
+      height: 530px;
+      padding: 7.5px;
+      background-color: rgba(255, 192, 203, 0.3);
+      border-radius: 5px;
+    }
+
+    table {
+      margin: 0 auto;
+      table-layout: fixed
+    }
+
+    td {
+      width: 80px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      border-radius: 5px;
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>李紫璇的寻找四叶草之旅</h1>
+      <div>
+        <input type="button" value="开垦一片新的草地" class="btn">
+      </div>
+    </header>
+    <article>
+      <table class="card" cellspacing="5px">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </article>
+  </div>
+
+  <script src="jquery.min.js"></script>
+  <script type="text/javascript">
+    var num = Math.floor(Math.random() * (99 - 1) + 1)
+    $("td").click(function () {
+      if ($(this).css("background-color") == "rgb(0, 128, 0)") {
+        let mynum = Math.floor(Math.random() * (99 - 1) + 1)
+        if (mynum == num) {
+          $(this).text('🍀')
+        } else {
+          $(this).text('☘')
+        }
+        $(this).css('background-color', 'pink')
+      }
+    })
+    $(".btn").click(function () {
+      location.reload(true);
+    })
+  </script>
+</body>
+
+</html>
